@@ -239,7 +239,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: "/api/isDuplicateId",
+        url: this.cloudtypeUrl + "/api/isDuplicateId",
         data: data,
       })
         .then(function(response) {
@@ -273,7 +273,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: "/api/isDuplicateNickName",
+        url: this.cloudtypeUrl + "/api/isDuplicateNickName",
         data: data,
       })
         .then(function(response) {
@@ -303,7 +303,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: "/api/sendSMS",
+        url: this.cloudtypeUrl + "/api/sendSMS",
       })
         .then(function(response) {
           vm.showVerificationCode = true;
@@ -328,7 +328,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: "/api/isNumberCheck",
+        url: this.cloudtypeUrl + "/api/isNumberCheck",
         data: data,
       })
         .then(function(response){
@@ -468,7 +468,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: "/api/signup",
+        url: this.cloudtypeUrl + "/api/signup",
         data: data,
       })
         .then(function(response) {

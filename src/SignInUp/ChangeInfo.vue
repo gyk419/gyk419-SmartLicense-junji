@@ -279,7 +279,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: "/api/isDuplicateNickName",
+        url: this.cloudtypeUrl + "/api/isDuplicateNickName",
         data: data,
       })
         .then(response => {
@@ -321,7 +321,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: "/api/updateUserInfo",
+        url: this.cloudtypeUrl + "/api/updateUserInfo",
         data: vm.member,
       })
         .then(response => {
@@ -353,7 +353,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: "/api/deleteAccount",
+        url: this.cloudtypeUrl + "/api/deleteAccount",
         data: postData,
       })
         .then(response => {
@@ -376,7 +376,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: "/api/getUserInfo",
+        url: this.cloudtypeUrl + "/api/getUserInfo",
         data: {member_id : vm.member.member_id }
       })
         .then(response => {

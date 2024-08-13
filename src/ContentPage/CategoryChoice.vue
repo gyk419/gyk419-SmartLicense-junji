@@ -204,7 +204,7 @@ export default {
             axios({
                 method: 'post',
                 headers: { 'Content-Type': 'application/json; charset=UTF-8' },
-                url: "/solveProblem/loadLicense",
+                url: this.cloudtypeUrl + "/solveProblem/loadLicense",
             })
                 .then(response => {
                     this.options1 = response.data.map(item => item.license_name);  // 여기에 데이터 매핑을 추가
@@ -218,7 +218,7 @@ export default {
             axios({
                 method: 'post',
                 headers: { 'Content-Type': 'application/json; charset=UTF-8' },
-                url: "/solveProblem/loadDetailLicense",
+                url: this.cloudtypeUrl + "/solveProblem/loadDetailLicense",
                 data: { license: license }
             })
                 .then(response => {
@@ -233,7 +233,7 @@ export default {
             axios({
                 method: 'post',
                 headers: { 'Content-Type': 'application/json; charset=UTF-8' },
-                url: "/solveProblem/loadSessionQuestion",
+                url: this.cloudtypeUrl + "/solveProblem/loadSessionQuestion",
                 data: { detailLicense: detailLicense }
             })
                 .then(response => {
@@ -249,7 +249,7 @@ export default {
             axios({
                 method: 'post',
                 headers: { 'Content-Type': 'application/json; charset=UTF-8' },
-                url: "/solveProblem/getSubjects",
+                url: this.cloudtypeUrl + "/solveProblem/getSubjects",
                 data: {
                     license_name: this.selectedOption1,
                     detail_license_name: this.selectedOption2,

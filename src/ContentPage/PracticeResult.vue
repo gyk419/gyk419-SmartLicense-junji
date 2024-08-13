@@ -157,7 +157,7 @@ export default {
       axios({
         method: 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: "/mode/storeExamRecordPractice",
+        url: this.cloudtypeUrl + "/mode/storeExamRecordPractice",
         data: recordData,
       })
         .then(response => {
@@ -186,7 +186,7 @@ export default {
       axios({
         method: 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: "/mode/loadPracticeScore",
+        url: this.cloudtypeUrl + "/mode/loadPracticeScore",
         data: postData,
       })
         .then(response => {

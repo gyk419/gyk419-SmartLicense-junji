@@ -75,7 +75,7 @@ export default {
             axios({
                 method: 'post',
                 header: { 'Content-Type': 'application/json; charset=UTF-8' },
-                url: "/api/findByPW",
+                url: this.cloudtypeUrl + "/api/findByPW",
                 data: userInfo,
             })
                 .then(function (response) {

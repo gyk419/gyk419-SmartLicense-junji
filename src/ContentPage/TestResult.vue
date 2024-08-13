@@ -117,7 +117,7 @@ export default {
       await axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: "/mode/loadTestScore",
+        url: this.cloudtypeUrl + "/mode/loadTestScore",
         data : loadData,
       })
         .then(response => {

@@ -210,7 +210,7 @@ export default {
         async loadExamRecord() {
             this.isLoading = true;
             try {
-                const response = await axios.post("/incorrectNote/loadExamRecord", {
+                const response = await axios.post(this.cloudtypeUrl + "/incorrectNote/loadExamRecord", {
                     memberId: this.memberId,
                     page: this.currentPage,
                     itemsPerPage: this.itemsPerPage
@@ -247,7 +247,7 @@ export default {
         },
         async deleteExamRecord() {
             try {
-                await axios.post("/incorrectNote/deleteExamRecord", {
+                await axios.post(this.cloudtypeUrl + "/incorrectNote/deleteExamRecord", {
                     memberId: this.memberId,
                     examRecordIdx: this.items[this.selectedItemIndex].exam_record_idx
                 }, {
@@ -269,7 +269,7 @@ export default {
         async searchRecords() {
             this.isLoading = true;
             try {
-                const response = await axios.post("/incorrectNote/searchRecord", {
+                const response = await axios.post(this.cloudtypeUrl + "/incorrectNote/searchRecord", {
                     memberId: this.memberId,
                     searchQuery: this.searchQuery,
                     page: this.currentPage,

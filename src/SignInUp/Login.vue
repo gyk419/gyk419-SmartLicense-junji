@@ -86,7 +86,7 @@ export default {
         axios({
           method : 'post',
           header: { 'Content-Type': 'application/json; charset=UTF-8' },
-          url: "/memberLogin/guestLogin",
+          url: this.cloudtypeUrl + "/memberLogin/guestLogin",
           data: null,
         })
           .then(response => {
@@ -130,7 +130,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: "/memberLogin/verify",
+        url: this.cloudtypeUrl + "/memberLogin/verify",
         data: dt,
       })
         .then(function(response){
