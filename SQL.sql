@@ -6,7 +6,7 @@ CREATE TABLE detail_license
     detail_license_description VARCHAR(255),
     license_idx INT NOT NULL
 );
-
+-- dddd
 CREATE TABLE exam_log_info
 (
 	idx INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
