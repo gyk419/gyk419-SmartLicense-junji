@@ -114,9 +114,13 @@ export default {
         this.$cookies.set('selectedSubjects', JSON.stringify(selectedSubjects));
         this.$router.push({ name: 'PracticeMode' });
       } else {
-        this.$router.push({ name: 'MyHistoryPage' });
-        this.storeExamRecord();
-        this.$cookies.remove('scoreResult');
+        if (sessionStorage.getItem('USER_ID') != null) {
+          this.$router.push({ name: 'MyHistoryPage' });
+          this.storeExamRecord();
+          this.$cookies.remove('scoreResult');
+        } else {
+          this.$router.push({ name: 'CategoryChoice' });
+        }
       }
     },
 
@@ -216,7 +220,15 @@ export default {
     },
     buttonText() {
       let selectedSubjects = JSON.parse(this.$cookies.get('selectedSubjects'));
-      return selectedSubjects.length > 1 ? '다음 과목 풀기' : '기록 페이지로 가기';
+      if(selectedSubjects.length > 1){
+        return '다음 과목 풀기';
+      } else{
+        if (sessionStorage.getItem('USER_ID') != null) {
+          return '기록 페이지로 가기';
+        } else {
+          return '홈으로 가기';
+        }
+      }
     }
   },
   mounted() {
