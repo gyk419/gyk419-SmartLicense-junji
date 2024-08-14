@@ -210,7 +210,7 @@ export default {
         async loadExamRecord() {
             this.isLoading = true;
             try {
-                const response = await axios.post(this.cloudtypeUrl + "/incorrectNote/loadExamRecord", {
+                const response = await axios.post("https://port-0-smartlicense-back-1272llwyzbyro.sel5.cloudtype.app/incorrectNote/loadExamRecord", {
                     memberId: this.memberId,
                     page: this.currentPage,
                     itemsPerPage: this.itemsPerPage
@@ -247,7 +247,7 @@ export default {
         },
         async deleteExamRecord() {
             try {
-                await axios.post(this.cloudtypeUrl + "/incorrectNote/deleteExamRecord", {
+                await axios.post("https://port-0-smartlicense-back-1272llwyzbyro.sel5.cloudtype.app/incorrectNote/deleteExamRecord", {
                     memberId: this.memberId,
                     examRecordIdx: this.items[this.selectedItemIndex].exam_record_idx
                 }, {
@@ -269,7 +269,7 @@ export default {
         async searchRecords() {
             this.isLoading = true;
             try {
-                const response = await axios.post(this.cloudtypeUrl + "/incorrectNote/searchRecord", {
+                const response = await axios.post("https://port-0-smartlicense-back-1272llwyzbyro.sel5.cloudtype.app/incorrectNote/searchRecord", {
                     memberId: this.memberId,
                     searchQuery: this.searchQuery,
                     page: this.currentPage,

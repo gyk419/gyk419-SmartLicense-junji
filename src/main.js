@@ -13,4 +13,4 @@ app.use(cookies, {
 app.mount('#app')
 
 
-app.config.globalProperties.cloudtypeUrl = "https://port-0-smartlicense-back-1272llwyzbyro.sel5.cloudtype.app";
+// app.config.globalProperties.cloudtypeUrl = "https://port-0-smartlicense-back-1272llwyzbyro.sel5.cloudtype.app";

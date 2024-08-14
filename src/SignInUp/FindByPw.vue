@@ -75,7 +75,7 @@ export default {
             axios({
                 method: 'post',
                 header: { 'Content-Type': 'application/json; charset=UTF-8' },
-                url: this.cloudtypeUrl + "/api/findByPW",
+                url: "https://port-0-smartlicense-back-1272llwyzbyro.sel5.cloudtype.app/api/findByPW",
                 data: userInfo,
             })
                 .then(function (response) {

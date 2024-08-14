@@ -279,7 +279,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: this.cloudtypeUrl + "/api/isDuplicateNickName",
+        url: "https://port-0-smartlicense-back-1272llwyzbyro.sel5.cloudtype.app/api/isDuplicateNickName",
         data: data,
       })
         .then(response => {
@@ -321,7 +321,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: this.cloudtypeUrl + "/api/updateUserInfo",
+        url: "https://port-0-smartlicense-back-1272llwyzbyro.sel5.cloudtype.app/api/updateUserInfo",
         data: vm.member,
       })
         .then(response => {
@@ -353,7 +353,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: this.cloudtypeUrl + "/api/deleteAccount",
+        url: "https://port-0-smartlicense-back-1272llwyzbyro.sel5.cloudtype.app/api/deleteAccount",
         data: postData,
       })
         .then(response => {
@@ -376,7 +376,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: this.cloudtypeUrl + "/api/getUserInfo",
+        url: "https://port-0-smartlicense-back-1272llwyzbyro.sel5.cloudtype.app/api/getUserInfo",
         data: {member_id : vm.member.member_id }
       })
         .then(response => {

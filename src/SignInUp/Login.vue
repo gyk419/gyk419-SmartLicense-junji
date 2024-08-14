@@ -86,7 +86,7 @@ export default {
         axios({
           method : 'post',
           header: { 'Content-Type': 'application/json; charset=UTF-8' },
-          url: this.cloudtypeUrl + "/memberLogin/guestLogin",
+          url: "https://port-0-smartlicense-back-1272llwyzbyro.sel5.cloudtype.app/memberLogin/guestLogin",
           data: null,
         })
           .then(response => {
@@ -130,7 +130,7 @@ export default {
       axios({
         method : 'post',
         header: { 'Content-Type': 'application/json; charset=UTF-8' },
-        url: this.cloudtypeUrl + "/memberLogin/verify",
+        url: "https://port-0-smartlicense-back-1272llwyzbyro.sel5.cloudtype.app/memberLogin/verify",
         data: dt,
       })
         .then(function(response){
